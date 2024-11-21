@@ -156,7 +156,9 @@
     <div class="content has-text-justified">
       <h3 class="title is-4">Ablation Studies</h3>
       <p>
-        We conducted real-time simulations to test the robustness of our model under dynamic conditions. 
+        We asses the impact of couplings in our biphasic interaction model. Left: Simulation of a single strand using our method and MS starting from a rest shape. Our model preserves global features, while 
+        MS fails to maintain shape, becoming unstable as \(\kappa_{L}\) increases. Right: Wisp simulation under decreasing angular coupling values. Instability grows as \(\kappa_{\alpha}\) 
+        decreases, collapsing entirely at \(\kappa_{\alpha} = 0\), where our method converges to MS.
       </p>
       <div class="columns is-centered">
         <div class="column is-half has-text-centered">
@@ -172,8 +174,8 @@
     <div class="content has-text-justified">
       <h3 class="title is-4">Simulation Fidelity</h3>
       <p>
-        Perm: A Parametric Representation for Multi-Style 3D Hair Modeling. 
-        Learn more about this project <a href="https://cs.yale.edu/homes/che/projects/perm/">here</a>.
+        Using the Wig model of <a href="https://history.siggraph.org/learning/robust-hair-capture-using-simulated-examples-by-hu-ma-luo-and-li/">Luo et. al.</a> under similar wind conditions, <a href="https://graphics.cs.utah.edu/research/projects/sag-free-hair/sig23_sagfree-hair.pdf">Hsu et. al.</a> achieves 1.2 ms/frame for 1024 strands, while our method runs at 0.04 ms for the same setup. 
+        For higher fidelity, we simulate 10,422 strands (full asset) at 1.9 ms/frame. Unlike <a href="https://graphics.cs.utah.edu/research/projects/sag-free-hair/sig23_sagfree-hair.pdf">Hsu et. al.</a>, our approach avoids sagging-specific initialization while maintaining stability.
       </p>
       <div class="content has-text-centered">
       <video autoplay loop controls width="55%">
@@ -187,8 +189,7 @@
     <div class="content has-text-justified">
       <h3 class="title is-4">Object Interaction</h3>
       <p>
-        The rendering pipeline experiment focuses on generating photorealistic hair from our 3D models.
-        Check out the <a href="https://example.com/rendering">detailed report</a>.
+        To reduce computational costs, prior works often interpolate from a limited set of guide strands, but this can cause artifacts in complex interactions. Here we show hair-hand interactions with 15k simulated strands and Linear Hair Skinning (LHS) using 2048 guides.
       </p>
       <div class="content has-text-centered">
         <video autoplay loop controls width="55%">
@@ -196,14 +197,16 @@
           Your browser does not support the video tag.
         </video>
         </div>
+
+        We further explore hair-solid interaction with 10,298 simulated strands and the neural interpolation model of <a href="http://yuefanshen.net/CTHair">Shen et. al.</a>. Neural methods, while effective, rely heavily on training data, leading to artifacts with novel objects or motions, and require extensive training, reducing adaptability in dynamic environments.
     </div>
 
     <!-- Subsection 3 -->
     <div class="content has-text-justified">
       <h3 class="title is-4">Non-Standard Settings</h3>
       <p>
-        The rendering pipeline experiment focuses on generating photorealistic hair from our 3D models.
-        Check out the <a href="https://example.com/rendering">detailed report</a>.
+        We demonstrate the effectiveness of our framework in simulating facial hair. MS is unable to maintain the original shape of the beard and moustache, 
+        while AMS preserves its structure and character.
       </p>
       <div class="video-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
         <div class="video-item">
@@ -220,8 +223,8 @@
         </div>
       </div>
       <p>
-        The rendering pipeline experiment focuses on generating photorealistic hair from our 3D models.
-        Check out the <a href="https://example.com/rendering">detailed report</a>.
+        We show the simulation of an asymmetric hairstyle using our scheme. The distinct dynamics of each section are accurately captured, 
+        demonstrating the versatility of our approach for non-standard hairstyles.
       </p>
       <div class="content has-text-centered">
         <video autoplay loop controls width="55%">
@@ -235,8 +238,7 @@
     <div class="content has-text-justified">
       <h3 class="title is-4">Extreme Forces</h3>
       <p>
-        The rendering pipeline experiment focuses on generating photorealistic hair from our 3D models.
-        Check out the <a href="https://example.com/rendering">detailed report</a>.
+      Here, we demonstrate the progressive hair shape change as strands undergo the intense acceleration of a roller-coaster. Our framework effectively preserves the initial hairstyle and captures the post-ride hair scramble by parametrizing non-Hookean responses in the integrity coupling of the biphasic interaction.
       </p>
       <div class="content has-text-centered">
         <video autoplay loop controls width="55%">
@@ -250,7 +252,7 @@
     <div class="content has-text-justified">
       <h3 class="title is-4">Demo</h3>
       <p>
-        Show grooming and Wukong
+        TODO: Real capture of grooming and Wukong
       </p>
     </div>
 
