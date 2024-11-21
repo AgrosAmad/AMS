@@ -260,31 +260,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+          We propose a novel Augmented Mass-Spring (AMS) model for real-time simulation of dense hair at strand level. Our approach considers the traditional edge, bending, and torsional degrees of freedom in mass-spring systems, but incorporates an additional one-way biphasic coupling with a ghost rest-shape configuration. 
+          Trough multiple evaluation experiments with varied dynamical settings, we show that AMS improves the stability of the simulation in comparison to mass-spring discretizations, preserves global features, and enables the simulation of non-Hookean effects. 
+          Using an heptadiagonal decomposition of the resulting matrix, our approach provides the efficiency advantages of mass-spring systems over more complex constitutive hair models, while enabling a more robust simulation of multiple strand configurations. 
+          Finally, our results demonstrate that our framework enables the generation, complex interactivity, and editing of simulation-ready dense hair assets in real-time. 
           </p>
         </div>
       </div>
