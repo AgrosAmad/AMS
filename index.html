@@ -85,6 +85,11 @@
   </div>
 </section>
 
+<div class="content has-text-centered">
+  <img src="./static/images/teaser.png" 
+       alt="Overview of Nerfies rendering"
+       style="width: 55%;">
+</div>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -92,11 +97,6 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-centered">
-          <img src="./static/images/teaser.png" 
-               alt="Overview of Nerfies rendering"
-               style="width: 75%;">
-        </div>
         <div class="content has-text-justified">
           <p>
           We propose a novel Augmented Mass-Spring (AMS) model for real-time simulation of dense hair at strand level. Our approach considers the traditional edge, bending, and torsional degrees of freedom in mass-spring systems, but incorporates an additional one-way biphasic coupling with a ghost rest-shape configuration. 
@@ -128,17 +128,17 @@
             as a weakly interaction with a ghost rest-shape via one-way springs that connect each particle with their corresponding 
             ghost in the rest configuration
           </p>
-          <p>
-            We implement an <strong>integrity</strong> spring, with stiffness \( \kappa_{I} \), and tension proportional to the deviation distance between a particle and its ghost; 
-            we also use an <strong>angular</strong>> spring, with stiffness \(\kappa_{\alpha}\), and tension proportional to the deviation angle \(d\theta\). 
-            Together, these springs form the biphasic connection between the ghost rest-shape and the simulated strand.
-          </p>
         </div>
         <div class="content has-text-centered">
           <img src="./static/images/diagram.png" 
-               alt="Overview of Nerfies rendering"
-               style="width: 75%;">
+                alt="Overview of Nerfies rendering"
+                style="width: 75%;">
         </div>
+        <p>
+          We implement an <strong>integrity</strong> spring, with stiffness \( \kappa_{I} \), and tension proportional to the deviation distance between a particle and its ghost; 
+          we also use an <strong>angular</strong> spring, with stiffness \(\kappa_{\alpha}\), and tension proportional to the deviation angle \(d\theta\). 
+          Together, these springs form the biphasic connection between the ghost rest-shape and the simulated strand.
+        </p>
 
       </div>
     </div>
@@ -146,6 +146,45 @@
 
   </div>
 </section>
+
+<section class="section" id="Experiments">
+  <div class="container is-max-desktop content">
+    <!-- Main Section Title -->
+    <h2 class="title is-3">Experiments</h2>
+
+    <!-- Subsection 1 -->
+    <div class="content has-text-justified">
+      <h3 class="title is-4">Curly Wig</h3>
+      <p>
+        Perm: A Parametric Representation for Multi-Style 3D Hair Modeling. 
+        Learn more about this project <a href="https://cs.yale.edu/homes/che/projects/perm/">here</a>.
+      </p>
+      <video autoplay loop controls width="15%">
+        <source src="./static/videos/wig.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Subsection 2 -->
+    <div class="content has-text-justified">
+      <h3 class="title is-4">Experiment 2: Real-Time Simulation</h3>
+      <p>
+        We conducted real-time simulations to test the robustness of our model under dynamic conditions. 
+        View the results <a href="https://example.com/simulation">here</a>.
+      </p>
+    </div>
+
+    <!-- Subsection 3 -->
+    <div class="content has-text-justified">
+      <h3 class="title is-4">Experiment 3: Rendering Pipeline</h3>
+      <p>
+        The rendering pipeline experiment focuses on generating photorealistic hair from our 3D models.
+        Check out the <a href="https://example.com/rendering">detailed report</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 <section class="section" id="Related">
   <!-- Concurrent Work. -->
