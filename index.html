@@ -92,6 +92,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/teaser.png" 
+               alt="Overview of Nerfies rendering"
+               style="width: 75%;">
+        </div>
         <div class="content has-text-justified">
           <p>
           We propose a novel Augmented Mass-Spring (AMS) model for real-time simulation of dense hair at strand level. Our approach considers the traditional edge, bending, and torsional degrees of freedom in mass-spring systems, but incorporates an additional one-way biphasic coupling with a ghost rest-shape configuration. 
@@ -123,6 +128,11 @@
             as a weakly interaction with a ghost rest-shape via one-way springs that connect each particle with their corresponding 
             ghost in the rest configuration
           </p>
+          <p>
+            We implement an <strong>integrity</strong> spring, with stiffness \( \kappa_{I} \), and tension proportional to the deviation distance between a particle and its ghost; 
+            we also use an <strong>angular</strong>> spring, with stiffness \(\kappa_{\alpha}\), and tension proportional to the deviation angle \(d\theta\). 
+            Together, these springs form the biphasic connection between the ghost rest-shape and the simulated strand.
+          </p>
         </div>
         <div class="content has-text-centered">
           <img src="./static/images/diagram.png" 
@@ -140,7 +150,7 @@
 <section class="section" id="Related">
   <!-- Concurrent Work. -->
   <div class="container is-max-desktop content">
-      <h2 class="title">Related Projects</h2>
+      <h2 class="title is-3">Related Projects</h2>
 
       <div class="content has-text-justified">
         <p>
