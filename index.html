@@ -88,7 +88,7 @@
         </div>
         <div class="content has-text-centered">
           <img src="./static/images/diagram.png" 
-                alt="Overview of Nerfies rendering"
+                alt="Overview of ams"
                 style="width: 75%;">
         </div>
         <p>
@@ -156,14 +156,26 @@
         </div>
 
         We further explore hair-solid interaction with 10,298 simulated strands and the neural interpolation model of <a href="http://yuefanshen.net/CTHair">Shen et. al.</a>. Neural methods, while effective, rely heavily on training data, leading to artifacts with novel objects or motions, and require extensive training, reducing adaptability in dynamic environments.
-    </div>
+        <div class="content has-text-centered">
+          <video autoplay loop controls width="55%">
+            <source src="./static/videos/sphere.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          </div>
+    
+      </div>
 
     <!-- Subsection 3 -->
     <div class="content has-text-justified">
       <h3 class="title is-4">Non-Standard Settings</h3>
       <p>
-        We demonstrate the effectiveness of our framework in simulating facial hair. MS is unable to maintain the original shape of the beard and moustache, 
-        while AMS preserves its structure and character.
+        We demonstrate the effectiveness of our framework in simulating facial hair. Traditional MS is not able to capture the behavior of strands of different lengths
+        because global features are not considered, and the general shape of the hair is lost after initialization. 
+        As a result, all strands behave similarly regardless of their length, decreasing the simulation fidelity for complex structures such as beards and moustaches.
+
+        Additionally, more complex models like DER also struggle with facial hair since they require using extremely stiff strands to maintain the desired structure of this type of hair.  
+        Our framework is able to overcome these limitations, preserving the structure and character of facial hair with minimal adjustments.
+
       </p>
       <div class="video-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
         <div class="video-item">
@@ -207,10 +219,24 @@
 
     <!-- Subsection 3 -->
     <div class="content has-text-justified">
-      <h3 class="title is-4">Demo</h3>
+      <h3 class="title is-4">Demonstrations</h3>
       <p>
-        TODO: Real capture of grooming and Wukong
+        We present live demonstrations of our framework alongside offline renderings derived from similar simulations. First, we show digital grooming.
       </p>
+      <div class="content has-text-centered">
+        <video autoplay loop controls width="55%">
+          <source src="./static/videos/groom.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/groom.png" 
+                alt="Overview of ams"
+                style="width: 75%;">
+        </div>
+        <p>
+        Finally, we demonstrate the simulation of hair and facial hair movements for <a href="https://www.heishenhua.com/">Wukong</a>
+        </p>
     </div>
 
 
