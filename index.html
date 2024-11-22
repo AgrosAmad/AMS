@@ -156,6 +156,8 @@
         </div>
 
         We further explore hair-solid interaction with 10,298 simulated strands and the neural interpolation model of <a href="http://yuefanshen.net/CTHair">Shen et. al.</a>. Neural methods, while effective, rely heavily on training data, leading to artifacts with novel objects or motions, and require extensive training, reducing adaptability in dynamic environments.
+        In this scenario, the hair loses its overall structure and becomes frizzy during interpolation with the neural approach, even before any interaction with the object occurs. This issue arises because the data-driven method does not consider changes in the rest-shape configuration of the hair.
+        
         <div class="content has-text-centered">
           <video autoplay loop controls width="55%">
             <source src="./static/videos/sphere.mp4" type="video/mp4">
